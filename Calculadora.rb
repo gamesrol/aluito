@@ -20,23 +20,50 @@ class Calculadora
 			when 7
 				r = Math.exp(Math.log(n1)/n2)
 		end
+		return r
 	end
 
 	def calcularL(n1, n2, op)
 		case op
 			when 1
-				c = n1.zero?
+				r = n1.zero?
 			when 2
-				c = n1 && n2
+				r = n1 && n2
 			when 3
-				c = n1 || n2
+				r = n1 || n2
 			when 4
-				c = n1 == n2
+				r = n1 == n2
 			when 5
-				c = n1 > n2
+				r = n1 > n2
 			when 6
-				c = n1 < n2
+				r = n1 < n2
 		end
+		return r
+	end
+
+	def calcularB(n1, n2, op)
+		case op
+			when 1
+				n1.to_s(2)
+				r = (n1).to_s(2)
+			when 2
+				(a = n1).to_s(2)
+				(b = n2).to_s(2)
+				r = (a && b).to_s(2)
+			when 3
+				(a = n1).to_s(2)
+				(b = n2).to_s(2)
+				r = (n1 || n2).to_s(2)
+			when 4
+				(a = n1).to_s(2)
+				(b = n2).to_s(2)
+				r = (n1 == n2).to_s(2)
+			when 5
+				r = n1 > n2
+			when 6
+				r = n1 < n2
+		end
+		return r
 	end
 
 end

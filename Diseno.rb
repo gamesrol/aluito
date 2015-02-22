@@ -5,13 +5,12 @@ class Diseno
 	
 	def menu()
 		system("clear")
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts "#              Calculadora aritmetica y logica               #".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "\n\t1-Aritmetica.\n\t2-Logica.\n\t0-salir.\n\nSelecciona:\n".blue
-
+		puts " "
+		puts "##############################################################"
+		puts "#              Calculadora aritmetica y logica               #"
+		puts "##############################################################"
+		puts " "
+		puts "\n\t1-Aritmetica.\n\t2-Logica.\n\t3-Binaria.\n\t0-salir.\n\nSelecciona:\n"
 		STDOUT.flush
 		op = gets.chomp.to_i
 		return op
@@ -19,12 +18,12 @@ class Diseno
 
 	def menuA()
 		system("clear")
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts "#                    Calculadora aritmetica                  #".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "\n\t1-Suma.\n\t2-resta.\n\t3-multiplicacion.\n\t4-division.\n\t5-Modulo.\n\t6-Producto.\n\t7-Raiz.\n\t0-Salir.\n\nSelecciona:\n".blue
+		puts " "
+		puts "##############################################################"
+		puts "#                    Calculadora aritmetica                  #"
+		puts "##############################################################"
+		puts " "
+		puts "\n\t1-Suma.\n\t2-resta.\n\t3-multiplicacion.\n\t4-division.\n\t5-Modulo.\n\t6-Producto.\n\t7-Raiz.\n\t0-Salir.\n\nSelecciona:\n"
 
 		STDOUT.flush
 		op = gets.chomp.to_i
@@ -33,28 +32,40 @@ class Diseno
 
 	def menuL()
 		system("clear")
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts "#                      Calculadora  logica                   #".center(80).colorize(:color => :white, :background => :blue)
-		puts "##############################################################".center(80).colorize(:color => :white, :background => :blue)
-		puts " ".center(80).colorize(:color => :white, :background => :blue)
-		puts "\n\t1. NOT\n\t2. AND\n\t3. OR\n\t4. Igual\n\t5. Mayor\n\t6. Menor\n\t0-salir.\n\nSelecciona:\n".blue
-
+		puts " "
+		puts "##############################################################"
+		puts "#                      Calculadora  logica                   #"
+		puts "##############################################################"
+		puts " "
+		puts "\n\t1. NOT\n\t2. AND\n\t3. OR\n\t4. Igual\n\t5. Mayor\n\t6. Menor\n\t0-salir.\n\nSelecciona:\n"
+		STDOUT.flush
+		op = gets.chomp.to_i
+		return op
+	end
+	
+		def menuB()
+		system("clear")
+		puts " "
+		puts "##############################################################"
+		puts "#                      Calculadora  binaria                  #"
+		puts "##############################################################"
+		puts " "
+		puts "Este modo convierte dos enteros a binarios y realiza operaciones con ellos"
+		puts "\n\t1. Conversión\n\t2. AND\n\t3. OR\n\t4. Igual\n\t5. Mayor\n\t6. Menor\n\t0-salir.\n\nSelecciona:\n"
 		STDOUT.flush
 		op = gets.chomp.to_i
 		return op
 	end
 
 	def setNumero()
-		puts "\nDame un operador:".blue
+		puts "\nDame un operador:"
 		STDOUT.flush
 		return gets.chomp.to_i
-		puts "\n\name un operador:".blue
 	end
 
 	def resultado(r)
-		puts "\n\nEl resultado es ".blue+String(r).white
-		puts "\n\nPulsa una tecla para continuar....".blue
+		puts "\n\nEl resultado es #{r}"
+		puts "\n\nPulsa una tecla para continuar...."
 		STDOUT.flush
 		exit = gets.chomp.to_i
 	end
