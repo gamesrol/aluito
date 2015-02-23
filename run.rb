@@ -1,8 +1,10 @@
-load 'Calculadora.rb' 
-load 'Diseno.rb' 
+load 'Class/Calculadora.rb' 
+load 'Class/Diseno.rb' 
+load 'Class/Fichero.rb' 
 
 cal = Calculadora.new()
 dis = Diseno.new()
+fil = Fichero.new()
 
 section = -1
 
@@ -37,7 +39,7 @@ while section != 0
 			end
 
 			dis.resultado(r)
-
+			fil.write(r.to_s)
 		end
 	end
 

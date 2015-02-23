@@ -51,7 +51,7 @@ class Diseno
 		puts "##############################################################"
 		puts " "
 		puts "Este modo convierte dos enteros a binarios y realiza operaciones con ellos"
-		puts "\n\t1. Conversión\n\t2. AND\n\t3. OR\n\t4. Igual\n\t5. Mayor\n\t6. Menor\n\t0-salir.\n\nSelecciona:\n"
+		puts "\n\t1. Conversion\n\t2. AND\n\t3. OR\n\t4. Igual\n\t5. Mayor\n\t6. Menor\n\t0-salir.\n\nSelecciona:\n"
 		STDOUT.flush
 		op = gets.chomp.to_i
 		return op
