@@ -23,7 +23,7 @@ class Diseno
 	end
 
 	def resultado(r)
-		puts "\n\nEl resultado es #{r}"
+		puts "\n\nEl resultado es "+ r.to_s(2)
 		puts "\n\nPulsa una tecla para continuar...."
 		STDOUT.flush
 		exit = gets.chomp.to_i

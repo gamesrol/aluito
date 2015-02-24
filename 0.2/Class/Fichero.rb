@@ -23,7 +23,7 @@ class Fichero
 			while linea = f1.gets
 				resultado = linea.split(";") 
 			end
+			return resultado
 		end
-		return resultado
 	end
 end
