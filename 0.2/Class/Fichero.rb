@@ -4,7 +4,7 @@ class Fichero
 		fileName = ""
 	end
 	
-	def write(dato)
+	def write(a, b)
 		text = ""
 		File.open('resultados.dat', 'r') do |f1|
 			while linea = f1.gets
@@ -13,15 +13,17 @@ class Fichero
 		end
 
 		File.open('resultados.dat', 'w') do |f|
-			f.puts text + dato
+			f.puts text
+			f.puts a+";"+b
 		end
 	end
 
 	def read()
-		File.open('resultados.dat', 'r') do |f1|
+		File.open('.dat', 'r') do |f1|
 			while linea = f1.gets
-				puts linea
+				resultado = linea.split(";") 
 			end
 		end
+		return resultado
 	end
 end

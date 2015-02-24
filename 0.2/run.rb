@@ -1,4 +1,4 @@
-load 'Class/Calculadora.rb' 
+load 'Class/alu.rb' 
 load 'Class/Diseno.rb' 
 load 'Class/Fichero.rb' 
 
